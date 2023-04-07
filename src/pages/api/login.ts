@@ -19,10 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // } else {
   //   res.status(401).json({ message: '이메일 또는 비밀번호가 올바르지 않습니다.' });
   // }
+  
   try {
     const result = await client.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, password]);
     if (result.rowCount === 1) {
-      res.status(200).json({ message: '로그인 성공!' });
+      res.status(200).json({ message: '로그인 성공!', result: result.rows[0] });
     } else {
       res.status(401).json({ message: '이메일 또는 비밀번호가 올바르지 않습니다.' });
     }
