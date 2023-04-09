@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const LoginForm = () => {
+const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,11 +17,9 @@ const LoginForm = () => {
     });
 
     const data = await response.json();
-    setMessage(data.message);
-    if (data.message === "로그인 성공!") {
-      console.log(data);
-      router.push('/board');
-    }
+    loginHandler(data);
+    // setMessage(data.message);
+    
   };
 
   return (
