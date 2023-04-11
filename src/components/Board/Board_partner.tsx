@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Board: React.FC = () => {
+const Board = () => {
   const [posts, setPosts] = useState<string[]>([]);
   const [newPost, setNewPost] = useState<string>("");
 
@@ -20,7 +20,7 @@ const Board: React.FC = () => {
 
   return (
     <div>
-      <h1>게시판</h1>
+      <h1>파트너 홈</h1>
       <form onSubmit={handleNewPostSubmit}>
         <input
           type="text"
