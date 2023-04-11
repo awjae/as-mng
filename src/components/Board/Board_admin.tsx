@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import styles from '@/src/components/Board/Board.module.css';
 
 const Board = () => {
 
   return (
     <div>
-      <h1>관리자 홈</h1>
+      <h1 className={styles.font_color_red}>관리자 홈</h1>
       <nav>
         <Link href={'/board'}>Home</Link>
         <Link href={'/board/admin/chart'}>Chart</Link>

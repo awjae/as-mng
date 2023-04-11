@@ -1,6 +1,7 @@
 // components/Board.tsx
 
 import React, { useState } from "react";
+import styles from '@/src/components/Board/Board.module.css';
 
 const Board = () => {
   const [posts, setPosts] = useState<string[]>([]);
@@ -20,7 +21,7 @@ const Board = () => {
 
   return (
     <div>
-      <h1>사용자 홈</h1>
+      <h1 className={styles.font_color_yellow}>사용자 홈</h1>
       <form onSubmit={handleNewPostSubmit}>
         <input
           type="text"
