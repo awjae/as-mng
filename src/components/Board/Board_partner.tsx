@@ -1,7 +1,7 @@
 // components/Board.tsx
 
 import React, { useState } from "react";
-import styles from '@/src/components/Board/Board.module.css';
+import styles from '@/components/Board/Board.module.css';
 import Link from "next/link";
 
 const Board = () => {
