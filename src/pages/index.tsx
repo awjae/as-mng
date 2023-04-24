@@ -1,6 +1,7 @@
 import LoginForm from "@/components/LoginForm"
 import useLoginStore from "@/store/loginStore"
 import styles from '@/styles/Home.module.css'
+import Head from "next/head"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 
@@ -16,8 +17,13 @@ export default function Home() {
   }
 
   return (
-    <main className={styles.main}>
-      <LoginForm loginHandler={loginHandler}></LoginForm>
-    </main>
+    <>
+      <Head>
+        <title>로그인 페이지</title>
+      </Head>
+      <main className={styles.main}>
+        <LoginForm loginHandler={loginHandler}></LoginForm>
+      </main>
+    </>
   )
 }
