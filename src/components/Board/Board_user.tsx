@@ -1,23 +1,23 @@
 // components/Board.tsx
 
-import React, { useState } from "react";
-import styles from '@/components/Board/Board.module.css';
+import React, { useState } from "react"
+import styles from '@/components/Board/Board.module.css'
 
 const Board = () => {
-  const [posts, setPosts] = useState<string[]>([]);
-  const [newPost, setNewPost] = useState<string>("");
+  const [posts, setPosts] = useState<string[]>([])
+  const [newPost, setNewPost] = useState<string>("")
 
   const handleNewPostChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNewPost(e.target.value);
+    setNewPost(e.target.value)
   };
 
   const handleNewPostSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     if (newPost.trim() !== "") {
-      setPosts((prevPosts) => [...prevPosts, newPost]);
-      setNewPost("");
+      setPosts((prevPosts) => [...prevPosts, newPost])
+      setNewPost("")
     }
-  };
+  }
 
   return (
     <div>
@@ -37,7 +37,7 @@ const Board = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Board;
+export default Board

@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
     const response = await fetch('/api/login', {
       method: 'POST',
@@ -16,8 +16,8 @@ const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
       body: JSON.stringify({ email, password }),
     });
 
-    const data = await response.json();
-    loginHandler(data);
+    const data = await response.json()
+    loginHandler(data)
     // setMessage(data.message);
     
   };
@@ -35,7 +35,7 @@ const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
       <button type="submit">Login</button>
       {message && <p>{message}</p>}
     </form>
-  );
-};
+  )
+}
 
-export default LoginForm;
+export default LoginForm

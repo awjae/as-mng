@@ -1,11 +1,10 @@
 // components/Board.tsx
 
-import React, { useState } from "react";
-import styles from '@/components/Board/Board.module.css';
-import Link from "next/link";
+import React, { useState } from "react"
+import styles from '@/components/Board/Board.module.css'
+import Link from "next/link"
 
 const Board = () => {
-
 
   return (
     <main>
@@ -17,7 +16,7 @@ const Board = () => {
         소비자 게시물
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Board;
+export default Board

@@ -1,8 +1,8 @@
 // components/Board.tsx
 
-import Link from "next/link";
-import React, { useState } from "react";
-import styles from '@/components/Board/Board.module.css';
+import Link from "next/link"
+import React, { useState } from "react"
+import styles from '@/components/Board/Board.module.css'
 
 const Board = () => {
 
@@ -15,7 +15,7 @@ const Board = () => {
         <Link href={'/board/admin/account'}>Account</Link>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Board;
+export default Board

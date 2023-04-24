@@ -7,7 +7,7 @@ import styles from '@/styles/Home.module.css';
 import { useEffect } from "react";
 
 export default function Home() {
-  const login = useLoginStore((state: any) => state.login);
+  const login = useLoginStore((state: any) => state.login)
 
   return (
     <main className={styles.main}>

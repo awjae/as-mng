@@ -5,4 +5,4 @@ const useLoginStore = create((set) => ({
   setLogin: (loginData: any) => set((state: any) => ({ login : { ...state.login, ...loginData }})),
 }))
 
-export default useLoginStore;
+export default useLoginStore
