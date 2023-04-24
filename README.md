@@ -38,5 +38,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## A/S 관리 시스템
+## A/S 관리 시스템 (개인 학습용)
 파트너와 소비자가 A/S를 제보하고 처리할 수 있는 플랫폼을 만들어보자
+
+## Commit Convention
+```
+[ADD] : 신기능 추가/개선
+[BUG] : 버그 수정 
+[CLN] : 불필요한 코드 제거
+[BLD] : 빌드관련 프로세스 수정
+[PERF] : 속도 개선
+[DOC] : 문서화
+```
