@@ -32,18 +32,15 @@ export default function Home({ post }: { post: PostMetaType}) {
     <>
       <PostMeta {...post}></PostMeta>
       <main className={styles.main}>
-        {
-          login.code === '00' && (
+        { login.code === '00' && (
             <BoardAdmin></BoardAdmin>
           )
         }
-        {
-          login.code === '01' && (
+        { login.code === '01' && (
             <BoardPartner></BoardPartner>
           )
         }
-        {
-          login.code === '02' && (
+        { login.code === '02' && (
             <BoardUser></BoardUser>
           )
         }
