@@ -10,7 +10,7 @@ const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
   // const [email, setEmail] = useState('')
   // const [password, setPassword] = useState('')
   // const [message, setMessage] = useState('')
-  const { register, handleSubmit: onSubmit } = useForm<FormValues>();
+  const { register, handleSubmit: onSubmit, formState: { isSubmitting, isDirty, errors } }= useForm<FormValues>();
 
   // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const handleSubmit: SubmitHandler<FormValues> = async (data) => {
@@ -62,7 +62,11 @@ const LoginForm = ({ loginHandler }: { loginHandler: Function; }) => {
         }})} 
       />
 
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={isSubmitting}>Submit</button>
+      <div>
+      {errors.email && <small role="alert">{errors.email.message}</small>}
+      {errors.password && <small role="alert">{errors.password.message}</small>}
+      </div>
     </form>
   )
 }
